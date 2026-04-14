@@ -31,7 +31,7 @@ export default function EnginesSection() {
       }}
     >
       {/* Triple Mercury 600 engines — prominent and bright */}
-      <div style={{
+      <div className="engines-bg" style={{
         position: 'absolute',
         inset: 0,
         background: `

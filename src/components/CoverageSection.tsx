@@ -18,7 +18,7 @@ export default function CoverageSection() {
       }}
     >
       {/* Background: plain-water.webp with gradient overlays */}
-      <div style={{
+      <div className="coverage-bg" style={{
         position: 'absolute',
         inset: 0,
         background: `

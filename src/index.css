@@ -128,7 +128,7 @@ body::before {
   .hero-content-grid {
     grid-template-columns: 1fr !important;
     min-height: auto !important;
-    padding: 100px 20px 40px !important;
+    padding: 50px 20px 30px !important;
   }
 
   .feature-cards-grid {
@@ -139,6 +139,9 @@ body::before {
   .feature-cards-grid article {
     min-height: 160px !important;
     padding: 22px 16px 20px !important;
+    background: rgba(8, 12, 19, 0.22) !important;
+    backdrop-filter: blur(6px) saturate(110%) !important;
+    -webkit-backdrop-filter: blur(6px) saturate(110%) !important;
   }
 
   .split-grid {
@@ -147,13 +150,30 @@ body::before {
   }
 
   .split-image-col {
-    min-height: 280px !important;
+    min-height: 320px !important;
   }
 
   .split-text-col {
     border-left: none !important;
     border-top: 1px solid rgba(255,255,255,.08) !important;
     padding: 32px 20px !important;
+  }
+
+  .hero-bg-image {
+    object-position: 78% 55% !important;
+  }
+
+  .split-bg {
+    background-position: 30% center !important;
+    background-size: cover !important;
+  }
+
+  .engines-bg {
+    background-size: cover !important;
+  }
+
+  .coverage-bg {
+    background-size: cover !important;
   }
 }
 

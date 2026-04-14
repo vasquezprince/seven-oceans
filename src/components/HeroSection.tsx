@@ -42,6 +42,7 @@ export default function HeroSection() {
       <img
         src={images.heroBackground}
         alt=""
+        className="hero-bg-image"
         style={{
           position: 'absolute',
           inset: 0,

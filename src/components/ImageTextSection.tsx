@@ -15,7 +15,7 @@ export default function ImageTextSection() {
       }}
     >
       {/* Full background: cockpit image + overlay */}
-      <div style={{
+      <div className="split-bg" style={{
         position: 'absolute',
         inset: 0,
         background: `
