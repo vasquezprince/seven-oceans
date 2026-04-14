@@ -86,6 +86,7 @@ export default function Navbar() {
             height: 44,
             borderRadius: 12,
             cursor: 'pointer',
+            display: 'grid',
             placeItems: 'center',
           }}
           aria-label="Menu"
