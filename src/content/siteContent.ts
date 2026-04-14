@@ -22,6 +22,7 @@ export const nav = {
     { label: 'Why Seven Oceans', href: '#why' },
     { label: 'Mercury V12 600', href: '#v12' },
     { label: 'Coverage', href: '#coverage' },
+    { label: 'Bulletins', href: '#' },
   ],
 }
 
