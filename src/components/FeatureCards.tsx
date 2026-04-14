@@ -21,7 +21,7 @@ export default function FeatureCards() {
     >
       <div
         ref={ref}
-        className="reveal"
+        className="reveal feature-cards-grid"
         style={{
           maxWidth: 'var(--page-max)',
           margin: '0 auto',

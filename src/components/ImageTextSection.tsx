@@ -25,7 +25,7 @@ export default function ImageTextSection() {
       }} />
 
       {/* Grid: image side LEFT, text side RIGHT */}
-      <div style={{
+      <div className="split-grid" style={{
         maxWidth: 'var(--page-max)',
         margin: '0 auto',
         display: 'grid',
@@ -35,7 +35,7 @@ export default function ImageTextSection() {
         position: 'relative',
       }}>
         {/* Left column — image shows through (transparent) */}
-        <div style={{ position: 'relative', minHeight: 470 }}>
+        <div className="split-image-col" style={{ position: 'relative', minHeight: 470 }}>
           <div style={{
             position: 'absolute',
             inset: 0,
@@ -45,7 +45,7 @@ export default function ImageTextSection() {
         </div>
 
         {/* Right column — glass text panel */}
-        <div style={{
+        <div className="split-text-col" style={{
           position: 'relative',
           zIndex: 2,
           display: 'flex',

@@ -70,6 +70,7 @@ export default function HeroSection() {
 
       {/* Hero content */}
       <div
+        className="hero-content-grid"
         style={{
           position: 'relative',
           zIndex: 3,
@@ -210,7 +211,7 @@ export default function HeroSection() {
       {/* Feature cards — sitting on top of hero background */}
       <div
         ref={cardsRef}
-        className="reveal"
+        className="reveal feature-cards-grid"
         style={{
           position: 'relative',
           zIndex: 3,
