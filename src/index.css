@@ -124,7 +124,15 @@ body::before {
 }
 
 /* ── Mobile responsive ── */
+.hero-eyebrow {
+  white-space: nowrap;
+}
+
 @media (max-width: 767px) {
+  .hero-eyebrow {
+    white-space: normal !important;
+  }
+
   .hero-content-grid {
     grid-template-columns: 1fr !important;
     min-height: auto !important;
