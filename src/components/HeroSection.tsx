@@ -89,7 +89,7 @@ export default function HeroSection({ onOpenContact }: Props) {
       >
         <div className="opacity-0 animate-fade-up" style={{ maxWidth: 560, animationDelay: '0.1s' }}>
           {/* Eyebrow */}
-          <div style={{
+          <div className="hero-eyebrow" style={{
             display: 'inline-block',
             marginBottom: 20,
             color: 'rgba(158,196,255,.9)',
