@@ -95,8 +95,9 @@ export default function HeroSection({ onOpenContact }: Props) {
             color: 'rgba(158,196,255,.9)',
             textTransform: 'uppercase',
             letterSpacing: '.2em',
-            fontSize: 'clamp(.95rem, 1.25vw, 1.15rem)',
+            fontSize: 'clamp(1.44rem, 1.91vw, 1.75rem)',
             fontWeight: 500,
+            whiteSpace: 'nowrap',
           }}>
             {hero.subtitle}
           </div>
