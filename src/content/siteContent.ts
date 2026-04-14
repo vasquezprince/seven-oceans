@@ -89,6 +89,9 @@ export const splitSection = {
 
 export const enginesSection = {
   sectionId: 'v12',
+  heading: 'THE ENGINE IS ONLY\nPART OF THE SYSTEM',
+  description:
+    'Seven Ocean also provides state-of-the-art metal work, enclosures, electronics, seakeeper, and more.',
 }
 
 export const coverage = {
