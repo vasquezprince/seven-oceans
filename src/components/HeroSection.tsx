@@ -1,11 +1,13 @@
 import { useEffect, useState } from 'react'
-import { Zap, Cpu, Gauge, Shield, Crown, type LucideIcon } from 'lucide-react'
 import { hero, images, features } from '../content/siteContent'
 import { useScrollReveal } from '../hooks/useScrollReveal'
+import PropellerIcon from './PropellerIcon'
 
-const iconMap: Record<string, LucideIcon> = { Zap, Cpu, Gauge, Shield, Crown }
+type Props = {
+  onOpenContact: () => void
+}
 
-export default function HeroSection() {
+export default function HeroSection({ onOpenContact }: Props) {
   const [offset, setOffset] = useState(0)
   const cardsRef = useScrollReveal<HTMLDivElement>()
 
@@ -89,11 +91,12 @@ export default function HeroSection() {
           {/* Eyebrow */}
           <div style={{
             display: 'inline-block',
-            marginBottom: 14,
-            color: 'rgba(158,196,255,.85)',
+            marginBottom: 20,
+            color: 'rgba(158,196,255,.9)',
             textTransform: 'uppercase',
-            letterSpacing: '.22em',
-            fontSize: '.72rem',
+            letterSpacing: '.2em',
+            fontSize: 'clamp(.95rem, 1.25vw, 1.15rem)',
+            fontWeight: 500,
           }}>
             {hero.subtitle}
           </div>
@@ -131,8 +134,9 @@ export default function HeroSection() {
 
           {/* Buttons */}
           <div style={{ display: 'flex', flexWrap: 'wrap', gap: 14, marginTop: 30 }}>
-            <a
-              href="#"
+            <button
+              type="button"
+              onClick={onOpenContact}
               className="hero-btn-primary"
               style={{
                 appearance: 'none',
@@ -146,6 +150,7 @@ export default function HeroSection() {
                 letterSpacing: '.06em',
                 textTransform: 'uppercase',
                 fontSize: '.82rem',
+                fontFamily: 'inherit',
                 textDecoration: 'none',
                 display: 'inline-flex',
                 alignItems: 'center',
@@ -166,9 +171,10 @@ export default function HeroSection() {
               }}
             >
               {hero.ctaPrimary}
-            </a>
-            <a
-              href="#"
+            </button>
+            <button
+              type="button"
+              onClick={onOpenContact}
               className="hero-btn-secondary"
               style={{
                 appearance: 'none',
@@ -182,6 +188,7 @@ export default function HeroSection() {
                 letterSpacing: '.06em',
                 textTransform: 'uppercase',
                 fontSize: '.82rem',
+                fontFamily: 'inherit',
                 textDecoration: 'none',
                 display: 'inline-flex',
                 alignItems: 'center',
@@ -204,7 +211,7 @@ export default function HeroSection() {
               }}
             >
               {hero.ctaSecondary}
-            </a>
+            </button>
           </div>
         </div>
       </div>
@@ -224,7 +231,6 @@ export default function HeroSection() {
         }}
       >
         {features.cards.map((card, i) => {
-          const Icon = iconMap[card.icon] || Zap
           return (
             <article
               key={card.title}
@@ -276,7 +282,7 @@ export default function HeroSection() {
                 boxShadow: 'inset 0 0 18px rgba(118,167,255,.08)',
                 color: 'var(--accent-2)',
               }}>
-                <Icon size={18} strokeWidth={1.5} />
+                <PropellerIcon size={24} />
               </div>
 
               <h3 style={{

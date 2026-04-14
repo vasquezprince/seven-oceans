@@ -1,8 +1,12 @@
 import { useState, useEffect } from 'react'
-import { Menu, X } from 'lucide-react'
-import { nav, images } from '../content/siteContent'
+import { Menu, X, Phone } from 'lucide-react'
+import { nav, images, contact } from '../content/siteContent'
 
-export default function Navbar() {
+type Props = {
+  onOpenContact: () => void
+}
+
+export default function Navbar({ onOpenContact }: Props) {
   const [scrolled, setScrolled] = useState(false)
   const [open, setOpen] = useState(false)
 
@@ -11,6 +15,12 @@ export default function Navbar() {
     window.addEventListener('scroll', fn, { passive: true })
     return () => window.removeEventListener('scroll', fn)
   }, [])
+
+  const handleContactClick = (e: React.MouseEvent) => {
+    e.preventDefault()
+    setOpen(false)
+    onOpenContact()
+  }
 
   return (
     <nav
@@ -72,6 +82,54 @@ export default function Navbar() {
               {link.label}
             </a>
           ))}
+
+          <a
+            href="#contact"
+            onClick={handleContactClick}
+            style={{
+              color: 'rgba(245,247,251,.82)',
+              textDecoration: 'none',
+              fontSize: '.86rem',
+              letterSpacing: '.02em',
+              transition: 'color .25s ease',
+            }}
+            onMouseEnter={e => (e.currentTarget.style.color = '#fff')}
+            onMouseLeave={e => (e.currentTarget.style.color = 'rgba(245,247,251,.82)')}
+          >
+            {nav.contactLabel}
+          </a>
+
+          <a
+            href={contact.phoneHref}
+            style={{
+              display: 'inline-flex',
+              alignItems: 'center',
+              gap: 8,
+              color: 'rgba(158,196,255,.92)',
+              textDecoration: 'none',
+              fontSize: '.88rem',
+              fontWeight: 600,
+              letterSpacing: '.04em',
+              padding: '8px 12px',
+              border: '1px solid rgba(126,176,255,.35)',
+              borderRadius: 10,
+              background: 'rgba(30,55,100,.16)',
+              transition: 'color .2s ease, border-color .2s ease, background .2s ease',
+            }}
+            onMouseEnter={e => {
+              e.currentTarget.style.color = '#fff'
+              e.currentTarget.style.borderColor = 'rgba(158,196,255,.65)'
+              e.currentTarget.style.background = 'rgba(40,70,130,.24)'
+            }}
+            onMouseLeave={e => {
+              e.currentTarget.style.color = 'rgba(158,196,255,.92)'
+              e.currentTarget.style.borderColor = 'rgba(126,176,255,.35)'
+              e.currentTarget.style.background = 'rgba(30,55,100,.16)'
+            }}
+          >
+            <Phone size={14} strokeWidth={1.8} />
+            {nav.phone}
+          </a>
         </div>
 
         {/* Mobile toggle */}
@@ -124,6 +182,29 @@ export default function Navbar() {
               {link.label}
             </a>
           ))}
+          <a
+            href="#contact"
+            onClick={handleContactClick}
+            style={{ color: 'rgba(245,247,251,.82)', textDecoration: 'none', fontSize: '.86rem', letterSpacing: '.02em' }}
+          >
+            {nav.contactLabel}
+          </a>
+          <a
+            href={contact.phoneHref}
+            style={{
+              display: 'inline-flex',
+              alignItems: 'center',
+              gap: 8,
+              color: 'rgba(158,196,255,.92)',
+              textDecoration: 'none',
+              fontSize: '.9rem',
+              fontWeight: 600,
+              letterSpacing: '.04em',
+            }}
+          >
+            <Phone size={14} strokeWidth={1.8} />
+            {nav.phone}
+          </a>
         </div>
       )}
     </nav>

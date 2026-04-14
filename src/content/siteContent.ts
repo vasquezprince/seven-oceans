@@ -15,12 +15,24 @@ export const images = {
 export const nav = {
   brand: 'SEVEN OCEANS',
   brandSuffix: 'SERVICES',
+  phone: '(555) 555-0199',
+  contactLabel: 'Contact',
   links: [
     { label: 'Concierge Center', href: '#concierge' },
     { label: 'Why Seven Oceans', href: '#why' },
     { label: 'Mercury V12 600', href: '#v12' },
     { label: 'Coverage', href: '#coverage' },
   ],
+}
+
+export const contact = {
+  phone: '(555) 555-0199',
+  phoneHref: 'tel:+15555550199',
+  heading: 'GET IN TOUCH',
+  subheading: "Share a few details and we'll reach out to set up concierge access.",
+  successMessage: "Thanks \u2014 we'll be in touch shortly.",
+  submitLabel: 'SEND MESSAGE',
+  callPrompt: 'Or call us:',
 }
 
 export const hero = {
@@ -88,4 +100,6 @@ export const coverage = {
 export const footer = {
   mercuryLabel: 'MERCURY',
   brandLabel: 'SEVEN OCEANS',
+  phone: '(555) 555-0199',
+  phoneHref: 'tel:+15555550199',
 }

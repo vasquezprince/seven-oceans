@@ -1,3 +1,4 @@
+import { Phone } from 'lucide-react'
 import { footer, images } from '../content/siteContent'
 
 export default function Footer() {
@@ -60,6 +61,31 @@ export default function Footer() {
           />
           <span>{footer.brandLabel}</span>
         </div>
+
+        {/* Divider */}
+        <div style={{ width: 1, height: 34, background: 'rgba(255,255,255,.1)' }} />
+
+        {/* Phone */}
+        <a
+          href={footer.phoneHref}
+          style={{
+            display: 'inline-flex',
+            alignItems: 'center',
+            gap: 10,
+            color: 'rgba(158,196,255,.92)',
+            textDecoration: 'none',
+            textTransform: 'uppercase',
+            letterSpacing: '.1em',
+            fontWeight: 600,
+            fontSize: '.9rem',
+            transition: 'color .2s ease',
+          }}
+          onMouseEnter={e => (e.currentTarget.style.color = '#fff')}
+          onMouseLeave={e => (e.currentTarget.style.color = 'rgba(158,196,255,.92)')}
+        >
+          <Phone size={16} strokeWidth={1.8} />
+          {footer.phone}
+        </a>
       </div>
     </footer>
   )
