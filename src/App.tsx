@@ -6,6 +6,10 @@ import EnginesSection from './components/EnginesSection'
 import CoverageSection from './components/CoverageSection'
 import Footer from './components/Footer'
 import ContactModal from './components/ContactModal'
+// ─── NEW SECTIONS (easy-revert): delete these 2 imports + the 2 render lines below to remove ───
+import ServicesSection from './components/ServicesSection'
+import WhyItMattersSection from './components/WhyItMattersSection'
+// ─── END NEW SECTIONS imports ───
 
 export default function App() {
   const [contactOpen, setContactOpen] = useState(false)
@@ -20,6 +24,10 @@ export default function App() {
           <HeroSection onOpenContact={openContact} />
           <ImageTextSection />
           <EnginesSection />
+          {/* ─── NEW SECTIONS (easy-revert): delete these 2 lines to remove ─── */}
+          <ServicesSection />
+          <WhyItMattersSection />
+          {/* ─── END NEW SECTIONS ─── */}
           <CoverageSection />
           <Footer />
         </div>

@@ -95,6 +95,55 @@ export const enginesSection = {
     'Seven Ocean also provides state-of-the-art metal work, enclosures, electronics, seakeeper, and more.',
 }
 
+// ─── NEW SECTIONS (easy-revert): delete this block + imports/renders in App.tsx to remove ───
+export const servicesSection = {
+  sectionId: 'services',
+  heading: 'CORE\nSERVICES',
+  items: [
+    {
+      title: 'Performance Oversight & Engineering Insight',
+      description:
+        'System\u2011level diagnostics and operational guidance focused on reliability, longevity, and confidence.',
+    },
+    {
+      title: '24/7 Global Concierge Support',
+      description:
+        'Immediate access to informed support\u2014any time, any location.',
+    },
+    {
+      title: 'Remote Intelligence & Decision Support',
+      description:
+        'Real\u2011time consultation when alerts, anomalies, or performance questions arise.',
+    },
+    {
+      title: 'Fleet\u2011Scale Insight',
+      description:
+        'Experience across large volumes of advanced outboard platforms enables early pattern recognition and preventive action.',
+    },
+    {
+      title: 'Concierge Coordination',
+      description:
+        'Clear, discreet coordination with owners, captains, service yards, and manufacturers.',
+    },
+  ],
+}
+
+export const whyItMattersSection = {
+  sectionId: 'why-it-matters',
+  heading: 'WHY THIS\nMATTERS',
+  intro: "Today\u2019s large\u2011outboard vessels:",
+  bullets: [
+    'Operate at sustained high speeds',
+    'Depend on integrated digital systems',
+    'Travel far beyond traditional marina support zones',
+  ],
+  body:
+    'As sophistication increases, so does complexity\u2014and complexity demands experience, judgment, and immediate access to support.',
+  closing:
+    'Seven Oceans Services \u2013 Large Outboard Concierge was built for that reality.',
+}
+// ─── END NEW SECTIONS ───
+
 export const coverage = {
   sectionId: 'coverage',
   heading: 'WHEREVER THE BOAT GOES,\nSUPPORT FOLLOWS',
