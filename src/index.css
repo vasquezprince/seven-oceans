@@ -37,6 +37,11 @@ html {
   scroll-behavior: smooth;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  scroll-padding-top: 74px;
+}
+
+section[id], [id="services"], [id="why"] {
+  scroll-margin-top: 74px;
 }
 
 body {

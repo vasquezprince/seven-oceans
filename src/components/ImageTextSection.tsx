@@ -6,7 +6,6 @@ export default function ImageTextSection() {
 
   return (
     <section
-      id={splitSection.sectionId}
       className="section-divider"
       style={{
         position: 'relative',
@@ -45,7 +44,7 @@ export default function ImageTextSection() {
         </div>
 
         {/* Right column — glass text panel */}
-        <div className="split-text-col" style={{
+        <div id={splitSection.sectionId} className="split-text-col" style={{
           position: 'relative',
           zIndex: 2,
           display: 'flex',

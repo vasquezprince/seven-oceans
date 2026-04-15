@@ -8,7 +8,6 @@ export default function ServicesSection() {
 
   return (
     <section
-      id={servicesSection.sectionId}
       className="section-divider"
       style={{
         position: 'relative',
@@ -49,7 +48,7 @@ export default function ServicesSection() {
         <div className="split-image-col" style={{ position: 'relative', minHeight: 540 }} />
 
         {/* Right column — glass text panel */}
-        <div className="split-text-col" style={{
+        <div id={servicesSection.sectionId} className="split-text-col" style={{
           position: 'relative',
           zIndex: 2,
           display: 'flex',
