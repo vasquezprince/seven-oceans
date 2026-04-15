@@ -69,7 +69,7 @@ body::before {
   border: 1px solid rgba(255,255,255,.06);
   background: linear-gradient(180deg, rgba(4,6,10,.9), rgba(6,9,14,.96));
   box-shadow: 0 25px 70px rgba(0,0,0,.45);
-  overflow: hidden;
+  overflow: clip;
 }
 
 /* ── Section dividers ── */
@@ -121,6 +121,261 @@ body::before {
 }
 @keyframes reveal-fb {
   to { opacity: 1; transform: translateY(0); }
+}
+
+/* ── Core Services scroll animation ── */
+.core-services-section {
+  position: relative;
+  overflow: clip;
+}
+.core-services-spacer {
+  position: relative;
+  height: 600vh;
+}
+.core-services-stage {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  background: #05070b;
+}
+.core-services-canvas {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+.core-services-vignette {
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(ellipse at 30% 50%, transparent 0%, rgba(3,6,11,.55) 70%),
+    linear-gradient(90deg, rgba(3,6,11,.35) 0%, transparent 45%);
+  pointer-events: none;
+}
+.core-services-loader {
+  position: absolute;
+  left: 50%;
+  bottom: 64px;
+  transform: translateX(-50%);
+  width: min(320px, 40vw);
+  z-index: 5;
+}
+.core-services-loader-bar {
+  position: relative;
+  width: 100%;
+  height: 2px;
+  background: rgba(255,255,255,.08);
+  overflow: hidden;
+}
+.core-services-loader-fill {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  background: linear-gradient(90deg, rgba(118,167,255,.9), rgba(158,196,255,.9));
+  transition: width .25s ease;
+}
+.core-services-overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+}
+.core-services-panel {
+  --panel-w: min(540px, 44vw);
+  --panel-edge: 5vw;
+  position: absolute;
+  top: 50%;
+  left: var(--panel-edge);
+  width: var(--panel-w);
+  transform: translateY(-50%);
+  background: rgba(8, 12, 19, 0.42);
+  backdrop-filter: blur(18px) saturate(120%);
+  -webkit-backdrop-filter: blur(18px) saturate(120%);
+  border: 1px solid rgba(255,255,255,.08);
+  box-shadow: inset 0 0 0 1px rgba(255,255,255,.025), 0 20px 60px rgba(0,0,0,.45);
+  opacity: 0;
+  overflow: hidden;
+  transition:
+    opacity .6s ease,
+    left .8s cubic-bezier(0.16, 1, 0.3, 1),
+    height .55s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.core-services-panel.visible {
+  opacity: 1;
+}
+.core-services-panel.right-side {
+  left: calc(100% - var(--panel-w) - var(--panel-edge));
+}
+.core-services-panel-ghost {
+  visibility: hidden;
+  padding: 40px 40px;
+  pointer-events: none;
+}
+.core-services-beat {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding: 40px 40px;
+  opacity: 0;
+  transition: opacity .6s cubic-bezier(0.16, 1, 0.3, 1), transform .6s cubic-bezier(0.16, 1, 0.3, 1);
+  pointer-events: none;
+}
+.core-services-beat.below {
+  transform: translateY(28px);
+}
+.core-services-beat.above {
+  transform: translateY(-28px);
+}
+.core-services-beat.active {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+.core-services-title {
+  margin: 0;
+  font-family: var(--font-display);
+  font-size: clamp(2.2rem, 3.6vw, 3.75rem);
+  line-height: 1;
+  letter-spacing: -.03em;
+  text-transform: uppercase;
+  color: #fff;
+}
+.core-services-lede {
+  margin: 22px 0 0;
+  color: rgba(225,232,243,.78);
+  font-size: 1rem;
+  line-height: 1.5;
+  max-width: 380px;
+}
+.core-services-index {
+  font-family: var(--font-display);
+  font-size: .8rem;
+  letter-spacing: .24em;
+  color: var(--accent-2);
+  margin-bottom: 16px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid rgba(126,176,255,.35);
+  width: max-content;
+}
+.core-services-item-title {
+  color: #fff;
+  font-family: var(--font-display);
+  font-size: clamp(1.4rem, 1.9vw, 1.95rem);
+  line-height: 1.15;
+  letter-spacing: -.01em;
+  font-weight: 600;
+  margin-bottom: 14px;
+}
+.core-services-item-desc {
+  color: rgba(225,232,243,.82);
+  font-size: 1rem;
+  line-height: 1.55;
+}
+.core-services-summary-title {
+  margin: 0 0 22px;
+  font-family: var(--font-display);
+  font-size: clamp(1.6rem, 2.4vw, 2.4rem);
+  line-height: 1;
+  letter-spacing: -.02em;
+  text-transform: uppercase;
+  color: #fff;
+}
+.core-services-summary-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  gap: 14px;
+}
+.core-services-summary-list li {
+  position: relative;
+  padding: 6px 10px 6px 16px;
+  border-left: 2px solid rgba(126,176,255,.45);
+  cursor: default;
+  transition:
+    transform .45s cubic-bezier(0.16, 1, 0.3, 1),
+    border-left-color .45s ease,
+    background-color .45s ease;
+}
+.core-services-summary-list li::before {
+  content: "";
+  position: absolute;
+  left: -2px;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: linear-gradient(180deg, rgba(158,196,255,0) 0%, rgba(158,196,255,.95) 50%, rgba(158,196,255,0) 100%);
+  opacity: 0;
+  transform: scaleY(.6);
+  transform-origin: center;
+  transition: opacity .45s ease, transform .45s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.core-services-summary-list li:hover {
+  transform: translateX(6px);
+  border-left-color: rgba(158,196,255,.9);
+  background-color: rgba(118,167,255,.06);
+}
+.core-services-summary-list li:hover::before {
+  opacity: 1;
+  transform: scaleY(1);
+}
+.core-services-summary-list li:hover .core-services-summary-item-title {
+  color: var(--accent-2);
+}
+.core-services-summary-list li:hover .core-services-summary-item-desc {
+  color: rgba(235,242,253,.9);
+}
+.core-services-summary-item-title {
+  color: #fff;
+  font-family: var(--font-display);
+  font-size: .98rem;
+  line-height: 1.2;
+  font-weight: 600;
+  margin-bottom: 2px;
+  transition: color .45s ease;
+}
+.core-services-summary-item-desc {
+  color: rgba(225,232,243,.72);
+  font-size: .84rem;
+  line-height: 1.45;
+  transition: color .45s ease;
+}
+.core-services-progress {
+  position: absolute;
+  right: 36px;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  z-index: 3;
+}
+.core-services-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: rgba(255,255,255,.18);
+  transition: background .4s ease, transform .4s ease;
+}
+.core-services-dot.active {
+  background: var(--accent);
+  transform: scale(1.4);
+}
+
+@media (max-width: 767px) {
+  .core-services-spacer { height: 500vh; }
+  .core-services-panel {
+    --panel-w: calc(100vw - 32px);
+    --panel-edge: 16px;
+  }
+  .core-services-panel-ghost,
+  .core-services-beat {
+    padding: 28px 24px;
+  }
 }
 
 /* ── Mobile responsive ── */
