@@ -263,6 +263,11 @@ body::before {
   #why-it-matters .split-grid {
     min-height: auto !important;
   }
+
+  .high-output-section,
+  .core-services-section {
+    min-height: auto !important;
+  }
 }
 
 @media (max-width: 480px) {

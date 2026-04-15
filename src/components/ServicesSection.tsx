@@ -8,7 +8,7 @@ export default function ServicesSection() {
 
   return (
     <section
-      className="section-divider"
+      className="section-divider core-services-section"
       style={{
         position: 'relative',
         minHeight: 540,

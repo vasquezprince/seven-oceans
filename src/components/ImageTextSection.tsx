@@ -6,7 +6,7 @@ export default function ImageTextSection() {
 
   return (
     <section
-      className="section-divider"
+      className="section-divider high-output-section"
       style={{
         position: 'relative',
         minHeight: 470,
