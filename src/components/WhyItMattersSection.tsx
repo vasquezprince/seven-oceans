@@ -14,14 +14,21 @@ export default function WhyItMattersSection() {
         overflow: 'hidden',
       }}
     >
-      {/* Generic dark blue-black background with subtle glow (mirrored position) */}
+      {/* Background image */}
       <div style={{
         position: 'absolute',
         inset: 0,
-        background: `
-          radial-gradient(circle at 78% 65%, rgba(118,167,255,.10), transparent 28%),
-          linear-gradient(180deg, rgba(5,8,14,.96), rgba(3,5,10,.99))
-        `,
+        backgroundImage: 'url(/images/why-this-matters.webp)',
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        backgroundRepeat: 'no-repeat',
+      }} />
+
+      {/* Dark tint for text legibility */}
+      <div style={{
+        position: 'absolute',
+        inset: 0,
+        background: 'linear-gradient(180deg, rgba(3,6,11,.45) 0%, rgba(3,6,11,.6) 100%)',
       }} />
 
       {/* Grid: text-side LEFT, image-side RIGHT (empty/gradient) */}

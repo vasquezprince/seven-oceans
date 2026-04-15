@@ -13,11 +13,17 @@ export default function Footer() {
         maxWidth: 'var(--page-max)',
         margin: '0 auto',
         display: 'flex',
+        flexDirection: 'column',
+        alignItems: 'center',
+        gap: 14,
+        padding: '28px 24px',
+      }}>
+      <div style={{
+        display: 'flex',
         alignItems: 'center',
         justifyContent: 'center',
         gap: 34,
         flexWrap: 'wrap',
-        padding: '28px 24px',
       }}>
         {/* Mercury */}
         <div style={{
@@ -86,6 +92,17 @@ export default function Footer() {
           <Phone size={16} strokeWidth={1.8} />
           {footer.phone}
         </a>
+      </div>
+
+        {/* Copyright */}
+        <div style={{
+          color: 'rgba(200,210,225,.5)',
+          fontSize: '.75rem',
+          letterSpacing: '.08em',
+          textAlign: 'center',
+        }}>
+          {footer.copyright}
+        </div>
       </div>
     </footer>
   )
