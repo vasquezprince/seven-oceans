@@ -19,9 +19,9 @@ export const nav = {
   contactLabel: 'Contact',
   links: [
     { label: 'Concierge Center', href: '#concierge' },
-    { label: 'Why Seven Oceans', href: '#why' },
-    { label: 'Mercury V12 600', href: '#v12' },
-    { label: 'Coverage', href: '#coverage' },
+    { label: 'Why Seven Oceans', href: '#why-it-matters' },
+    { label: 'Mercury V12 600', href: '#why' },
+    { label: 'Core Services', href: '#services' },
     { label: 'Bulletins', href: '#' },
   ],
 }
