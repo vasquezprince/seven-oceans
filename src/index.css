@@ -231,6 +231,11 @@ body::before {
     padding: 32px 20px !important;
   }
 
+  .split-text-col--left {
+    order: 2;
+    border-right: none !important;
+  }
+
   .hero-bg-image {
     object-position: 78% 55% !important;
   }
