@@ -15,14 +15,17 @@ export default function WhyItMattersSection() {
       }}
     >
       {/* Background image */}
-      <div style={{
-        position: 'absolute',
-        inset: 0,
-        backgroundImage: 'url(/images/why-this-matters.webp)',
-        backgroundSize: 'cover',
-        backgroundPosition: 'center',
-        backgroundRepeat: 'no-repeat',
-      }} />
+      <div
+        className="why-it-matters-bg"
+        style={{
+          position: 'absolute',
+          inset: 0,
+          backgroundImage: 'url(/images/why-this-matters.webp)',
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          backgroundRepeat: 'no-repeat',
+        }}
+      />
 
       {/* Dark tint for text legibility */}
       <div style={{
@@ -140,7 +143,7 @@ export default function WhyItMattersSection() {
         </div>
 
         {/* Right column — just atmosphere */}
-        <div className="split-image-col" style={{ position: 'relative', minHeight: 540 }}>
+        <div className="split-image-col why-it-matters-empty-col" style={{ position: 'relative', minHeight: 540 }}>
           <div style={{
             position: 'absolute',
             inset: 0,

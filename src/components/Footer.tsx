@@ -35,6 +35,7 @@ export default function Footer() {
           letterSpacing: '.14em',
           fontWeight: 700,
           fontSize: '.9rem',
+          fontFamily: 'var(--font-display)',
           opacity: .92,
         }}>
           <img
@@ -58,6 +59,7 @@ export default function Footer() {
           letterSpacing: '.14em',
           fontWeight: 700,
           fontSize: '.9rem',
+          fontFamily: 'var(--font-display)',
           opacity: .92,
         }}>
           <img

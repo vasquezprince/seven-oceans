@@ -242,6 +242,22 @@ body::before {
   .coverage-bg {
     background-size: cover !important;
   }
+
+  .why-it-matters-bg {
+    background-position: right center !important;
+  }
+
+  .why-it-matters-empty-col {
+    display: none !important;
+  }
+
+  #why-it-matters {
+    min-height: auto !important;
+  }
+
+  #why-it-matters .split-grid {
+    min-height: auto !important;
+  }
 }
 
 @media (max-width: 480px) {

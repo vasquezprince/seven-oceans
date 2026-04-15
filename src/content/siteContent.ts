@@ -18,7 +18,6 @@ export const nav = {
   phone: '(555) 555-0199',
   contactLabel: 'Contact',
   links: [
-    { label: 'Concierge Center', href: '#concierge' },
     { label: 'Why Seven Oceans', href: '#why-it-matters' },
     { label: 'Mercury V12 600', href: '#why' },
     { label: 'Core Services', href: '#services' },
