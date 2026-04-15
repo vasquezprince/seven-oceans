@@ -101,7 +101,7 @@ export default function Footer() {
           letterSpacing: '.08em',
           textAlign: 'center',
         }}>
-          {footer.copyright}
+          {'\u00A9 2026 Seven Oceans Services. All rights reserved.'}
         </div>
       </div>
     </footer>
