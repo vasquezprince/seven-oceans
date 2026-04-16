@@ -212,8 +212,8 @@ body::before {
     min-height: 160px !important;
     padding: 22px 16px 20px !important;
     background: rgba(8, 12, 19, 0.22) !important;
-    backdrop-filter: blur(6px) saturate(110%) !important;
-    -webkit-backdrop-filter: blur(6px) saturate(110%) !important;
+    backdrop-filter: blur(2px) saturate(110%) !important;
+    -webkit-backdrop-filter: blur(2px) saturate(110%) !important;
   }
 
   .split-grid {
@@ -237,7 +237,7 @@ body::before {
   }
 
   .hero-bg-image {
-    object-position: 78% 55% !important;
+    object-position: calc(78% + 140px) 55% !important;
   }
 
   .split-bg {
@@ -272,6 +272,10 @@ body::before {
   .high-output-section,
   .core-services-section {
     min-height: auto !important;
+  }
+
+  .core-services-bg {
+    background-image: url(/images/core-services-m.webp) !important;
   }
 }
 
