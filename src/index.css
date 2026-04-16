@@ -237,7 +237,7 @@ body::before {
   }
 
   .hero-bg-image {
-    object-position: calc(78% + 140px) 55% !important;
+    object-position: center center !important;
   }
 
   .split-bg {

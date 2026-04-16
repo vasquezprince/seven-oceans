@@ -41,20 +41,23 @@ export default function HeroSection({ onOpenContact }: Props) {
       />
 
       {/* Hero image */}
-      <img
-        src={images.heroBackground}
-        alt=""
-        className="hero-bg-image"
-        style={{
-          position: 'absolute',
-          inset: 0,
-          width: '100%',
-          height: '100%',
-          objectFit: 'cover',
-          objectPosition: '62% 40%',
-          transform: `translateY(${offset}px)`,
-        }}
-      />
+      <picture>
+        <source media="(max-width: 767px)" srcSet="/images/hero-v2-m.webp" />
+        <img
+          src={images.heroBackground}
+          alt=""
+          className="hero-bg-image"
+          style={{
+            position: 'absolute',
+            inset: 0,
+            width: '100%',
+            height: '100%',
+            objectFit: 'cover',
+            objectPosition: 'center center',
+            transform: `translateY(${offset}px)`,
+          }}
+        />
+      </picture>
 
       {/* Subtle light effects */}
       <div
