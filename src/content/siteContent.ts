@@ -95,7 +95,7 @@ export const enginesSection = {
   sectionId: 'v12',
   heading: 'THE ENGINE IS ONLY\nPART OF THE SYSTEM',
   description:
-    'Seven Ocean also provides state-of-the-art metal work, enclosures, electronics, seakeeper, and more.',
+    'Seven Ocean also provides state-of-the-art refit capabilities, custom paint, fiberglass repair, custom work, metal fabrication, electronics, softgoods, and much more.',
 }
 
 // ─── NEW SECTIONS (easy-revert): delete this block + imports/renders in App.tsx to remove ───
