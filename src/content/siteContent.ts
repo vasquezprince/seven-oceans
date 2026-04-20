@@ -10,6 +10,10 @@ export const images = {
   engines: '/images/triple-600-v2.webp',
   coverageBackground: '/images/plain-water.webp',
   logo: '/images/logo.png',
+  // ─── NEW LOGO REFS (easy-revert: delete these two lines to restore single-logo setup) ───
+  logoSevenOceans: '/images/seven-oceans-logo-orig.png',
+  logoMercury: '/images/mercury-logo-orig.png',
+  // ─── END NEW LOGO REFS ───
 }
 
 export const nav = {
