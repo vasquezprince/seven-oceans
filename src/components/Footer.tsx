@@ -39,11 +39,10 @@ export default function Footer() {
           opacity: .92,
         }}>
           <img
-            src={images.logo}
+            src={images.logoMercury}
             alt="Mercury"
-            style={{ width: 42, height: 20, objectFit: 'contain', opacity: .95 }}
+            style={{ width: 130, height: 'auto', objectFit: 'contain', opacity: .95 }}
           />
-          <span>{footer.mercuryLabel}</span>
         </div>
 
         {/* Divider */}
@@ -63,11 +62,10 @@ export default function Footer() {
           opacity: .92,
         }}>
           <img
-            src={images.logo}
+            src={images.logoSevenOceans}
             alt="Seven Oceans"
-            style={{ width: 42, height: 20, objectFit: 'contain', opacity: .95 }}
+            style={{ width: 100, height: 'auto', objectFit: 'contain', opacity: .95 }}
           />
-          <span>{footer.brandLabel}</span>
         </div>
 
         {/* Divider */}

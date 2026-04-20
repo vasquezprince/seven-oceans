@@ -53,14 +53,10 @@ export default function Navbar({ onOpenContact }: Props) {
         {/* Logo */}
         <a href="#" style={{ display: 'inline-flex', alignItems: 'center', gap: 12, textDecoration: 'none', color: 'var(--text)' }}>
           <img
-            src={images.logo}
-            alt="Seven Oceans"
-            style={{ width: 62, height: 28, objectFit: 'contain', filter: 'drop-shadow(0 0 10px rgba(118,167,255,.12))' }}
+            src={images.logoSevenOceans}
+            alt="Seven Oceans Services"
+            style={{ width: 100, height: 'auto', objectFit: 'contain', filter: 'drop-shadow(0 0 10px rgba(118,167,255,.12))' }}
           />
-          <span style={{ fontSize: '1rem', letterSpacing: '.16em', fontWeight: 600, whiteSpace: 'nowrap', fontFamily: 'var(--font-display)' }}>
-            {nav.brand}{' '}
-            <span style={{ fontWeight: 300, color: 'rgba(255,255,255,.78)' }}>{nav.brandSuffix}</span>
-          </span>
         </a>
 
         {/* Desktop links */}
